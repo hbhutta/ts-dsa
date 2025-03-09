@@ -1,0 +1,28 @@
+class DoublyLinkedList {
+    public head: ListNode;
+    public tail: ListNode | null;
+    constructor(head: ListNode) {
+        this.head = head;
+        this.tail = head;
+    }
+
+    insertAtTail(node: ListNode): void {
+        this.tail != null ? this.tail.setNext(node) : this.tail = node;
+    }
+
+    insertAtHead(): boolean {
+        
+        return false; // stub
+    }
+
+    deleteAtHead(): void {
+        
+    }
+
+    deleteAtTail() {
+        let toDelete = this.tail;
+        this.tail = toDelete.getPrev();
+        this.tail.setNext(null);
+        toDelete.setPrev(null);
+    }
+}
