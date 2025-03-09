@@ -1,6 +1,7 @@
 class ListNode {
     private value: number;
     private next: ListNode | null;
+    private prev: ListNode | null;
     
     constructor(value: number) {
         this.value = value;
@@ -21,5 +22,13 @@ class ListNode {
 
     setNext(node: ListNode): void {
         this.next = node;
+    }
+
+    getPrev(): ListNode | null {
+        return this.prev;
+    }
+
+    setPrev(node: ListNode): void {
+        this.prev = node;
     }
 }
